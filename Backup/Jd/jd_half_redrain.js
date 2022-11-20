@@ -231,7 +231,7 @@ async function retryCdn(code, url) {
     if (code === 'error') {
         let items = url.split("/")
         let fn = items[items.length-1]
-        let cndUrl = `https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Jd/jd-half-rain.json`
+        let cndUrl = `https://raw.githubusercontent.com/GangPeter/QX/main/Jd/jd-half-rain.json`
         $.log(`召唤龙王失败, 召唤神龙: ${cndUrl}`)
         code = await redRainId(cndUrl)
     }
@@ -240,7 +240,7 @@ async function retryCdn(code, url) {
 }
 
 function rraUrl() {
-    let url = 'https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Jd/jd-half-rain.json'
+    let url = 'https://raw.githubusercontent.com/GangPeter/QX/main/Jd/jd-half-rain.json'
     if($.isNode() && process.env.JD_HALF_RRA_URL){
         url = process.env.JD_HALF_RRA_URL
     }else if($.getdata('jdHalfRRAUrl')){
